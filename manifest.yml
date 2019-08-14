@@ -8,7 +8,7 @@ applications:
   memory: 128M
 
 env:
-    groupme_token: 4VMyl2gYHs3SNJmnLJnAvXxvTTKLG5wW4hzsnUke
+    groupme_token: 4IgXiBBR1EGFeOHkJm7hIApOl5GaQbysIarjnPDj
     botname: brick
     wolframid: AJUXVY-6A5AGT8QJ5
     db_name: brick
