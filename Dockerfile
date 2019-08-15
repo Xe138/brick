@@ -7,4 +7,4 @@ WORKDIR /app
 RUN pip install pipenv
 RUN pipenv install --system --deploy --ignore-pipfile
 
-CMD ["python", "server.py"]
+CMD ["python", "-u", "server.py"]
