@@ -83,6 +83,9 @@ def process(data):
         data['history'] = state['history']
         data = core(data)
 
+    if config['debug']:
+        util.debug('Process Result:', data)
+
     # Outburst
     refresh_outburst()
 

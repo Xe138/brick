@@ -43,7 +43,7 @@ class Handler(CGIHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/status':
             domain = 'localhost:8000'
-            domains = ('http://brick-web.mybluemix.net', 'http://brick.mybluemix.net', 'http://brick.prettyhefty.com')
+            domains = ('https://brick.prettyhefty.com')
             origin = self.headers.get('Origin')
             if origin in domains:
               domain = origin
