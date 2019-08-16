@@ -1019,6 +1019,7 @@ def core(bag):
     else:
         log_tag = ''
     log('Processing Message -', bag['name'], '(' + bag['role'] + ')', log_tag + ':', bag['msg'])
+    jprint(bag)
 
     # Check if shutup - admin override
     if shutup() and (bag['role'] not in ('admin, op') or not bag['addressed']):
