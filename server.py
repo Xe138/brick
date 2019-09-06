@@ -60,7 +60,7 @@ class Handler(CGIHTTPRequestHandler):
             self.end_headers()
             return
 
-        CGIHTTPRequestHandler.do_GET(self)
+        # CGIHTTPRequestHandler.do_GET(self)
 
     # Handle POST requests
     def do_POST(self):
