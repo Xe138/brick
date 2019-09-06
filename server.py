@@ -43,7 +43,7 @@ class Handler(CGIHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/status':
             domain = 'localhost:8000'
-            domains = ('https://brick.prettyhefty.com')
+            domains = ('https://brick.prettyhefty.com', 'https://betabrick.prettyhefty.com')
             origin = self.headers.get('Origin')
             if origin in domains:
               domain = origin
@@ -60,7 +60,7 @@ class Handler(CGIHTTPRequestHandler):
             self.end_headers()
             return
 
-        CGIHTTPRequestHandler.do_GET(self)
+        # CGIHTTPRequestHandler.do_GET(self)
 
     # Handle POST requests
     def do_POST(self):

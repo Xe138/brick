@@ -2958,7 +2958,8 @@ def loadState():
 def selectState(s):
 
     # Eliminate invalid modes
-    s = [x for x in s if 'config' in x.keys() and x['config']['offline'] == config['offline']]
+    # Valid modes contain a config file with matching 'offline' and 'botname' settings
+    s = [x for x in s if 'config' in x.keys() and x['config']['offline'] == config['offline'] and x['config']['botname'] == config['botname']]
 
     # Eliminate invalid versions
     old = [x['_id'] for x in s]
@@ -2986,7 +2987,7 @@ def newState():
     log('Generating new state...')
 
     state = {
-        'config'      : config,
+        'config'       : config,
         'version'      : version,
         'uptime'       : time.time(),
         'undo'         : {},
