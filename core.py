@@ -48,7 +48,7 @@ mods = plugins.__all__
 mods.remove('__init__')
 
 # Global Declarations
-version = '3.0.2a'
+version = '3.0.3'
 cache = {}
 var_cache = {}
 users = {}
