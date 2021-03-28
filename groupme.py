@@ -19,7 +19,7 @@
 from time import sleep
 import settings
 import requests
-from util import log
+from util import log, debug
 
 class bot:
 
