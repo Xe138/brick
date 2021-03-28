@@ -44,6 +44,10 @@ class bot:
                 resp.raise_for_status()
             except Exception as err:
                 log("Message post failed - " + str(err))
+                
+                if settings.config['debug']:
+                    util.debug('response:', resp)
+                
                 return { 'code' : settings.code['failed'] }
 
         # Success
