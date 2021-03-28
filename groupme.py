@@ -46,7 +46,7 @@ class bot:
                 log("Message post failed - " + str(err))
                 
                 if settings.config['debug']:
-                    util.debug('response:', resp)
+                    debug('response:', resp)
                 
                 return { 'code' : settings.code['failed'] }
 
